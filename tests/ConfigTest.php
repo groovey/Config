@@ -1,10 +1,7 @@
 <?php
 
 use Silex\Application;
-
 use Groovey\Config\Providers\Config as ConfigServiceProvider;
-use Groovey\Traits\Config as ConfigTrait;
-
 
 class ConfigTest extends PHPUnit_Framework_TestCase
 {
@@ -13,10 +10,10 @@ class ConfigTest extends PHPUnit_Framework_TestCase
         $app = new Application();
         $app['debug'] = true;
 
-        $app->register(new ConfigServiceProvider(),[
+        $app->register(new ConfigServiceProvider(), [
                 'config.path'        => __DIR__.'/config',
                 'config.environment' => 'LOCALHOST',
-            ]);;
+            ]);
 
         return $app;
     }
@@ -35,7 +32,5 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('root', $app['config']->get('database.mysql.username'));
         $this->assertEquals('88.88.88.88', $app['config']->get('database.mysql.host'));
-
     }
-
 }

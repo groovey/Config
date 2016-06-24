@@ -9,17 +9,16 @@ use Silex\Api\BootableProviderInterface;
 use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository;
 
-
 class Config implements ServiceProviderInterface, BootableProviderInterface
 {
     public function register(Container $app)
     {
-        $app['config'] = function($app) {
+        $app['config'] = function ($app) {
 
             $path = $app['config.path'];
             $env  = $app['config.environment'];
 
-            $folder = $path . '/' . strtolower($env);
+            $folder = $path.'/'.strtolower($env);
 
             $phpFiles = Finder::create()->files()->name('*.php')->in($folder)->depth(0);
 
@@ -34,6 +33,4 @@ class Config implements ServiceProviderInterface, BootableProviderInterface
     public function boot(Application $app)
     {
     }
-
-
 }

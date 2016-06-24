@@ -9,7 +9,7 @@ return [
     */
     'mysql' => [
             'host'      => '88.88.88.88',
-            'username'  => 'root'
+            'username'  => 'root',
         ],
 
     /*
