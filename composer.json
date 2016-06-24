@@ -1,0 +1,26 @@
+{
+    "name": "groovey/config",
+    "description": "A Silex 2.* service provider that uses the laravel/config component.",
+    "license": "MIT",
+    "keywords": ["silex", "config", "silex 2", "laravel", "illuminate config"],
+    "authors": [
+        {
+            "name": "Harold Kim Cantil",
+            "email": "pokoot@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex" : "~2.0",
+        "illuminate/config": "~5.2",
+        "illuminate/filesystem": "~5.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Groovey\\Config\\": "src"
+        }
+    }
+
+}
