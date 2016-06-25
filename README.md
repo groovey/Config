@@ -34,6 +34,7 @@ A Silex 2.* service provider that uses the laravel/config component.
 
 # Using traits
 
+```php
     use Silex\Application;
 
     class App extends Application
@@ -50,6 +51,7 @@ A Silex 2.* service provider that uses the laravel/config component.
             return $this['config']->get($setting, $default);
         }
     }
+```     
 
 
     $app->config('app.name');
