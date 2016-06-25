@@ -4,6 +4,7 @@ A Silex 2.* service provider that uses the laravel/config component.
 
 # Prerequisites
 
+```php 
     // Folder config
 
     /config/localhost/app.php
@@ -15,11 +16,12 @@ A Silex 2.* service provider that uses the laravel/config component.
     return [
         'name' => 'Groovey'
     ];
-
+```
 
 
 # Usage
 
+```php 
     $app = new Application();
     $app['debug'] = true;
 
@@ -30,7 +32,7 @@ A Silex 2.* service provider that uses the laravel/config component.
 
 
     $app['config']->get('app.name');
-
+```
 
 # Using traits
 
@@ -51,9 +53,9 @@ A Silex 2.* service provider that uses the laravel/config component.
             return $this['config']->get($setting, $default);
         }
     }
-```     
-
 
     $app->config('app.name');
+```
+
 
 
