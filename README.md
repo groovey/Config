@@ -45,15 +45,6 @@ class App extends Application
 }
 
 $app = new App();
-
-trait Config
-{
-    public function config($setting, $default = '')
-    {
-        return $this['config']->get($setting, $default);
-    }
-}
-
 $app->config('app.name');
 ```
 
