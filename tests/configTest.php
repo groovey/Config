@@ -3,7 +3,7 @@
 use Silex\Application;
 use Groovey\Config\Providers\ConfigServiceProvider;
 
-class ConfigTest extends PHPUnit_Framework_TestCase
+class configTest extends PHPUnit_Framework_TestCase
 {
     private function init()
     {
@@ -24,13 +24,17 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('Groovey', $app['config']->get('app.name'));
         $this->assertTrue($app['config']->get('app.debug'));
+
+        $app['config']->set('app.debug', false);
+        $cond = $app['config']->get('app.debug');
+        $this->assertFalse($cond);
     }
 
     public function testDatabase()
     {
         $app = $this->init();
 
-        $this->assertEquals('root', $app['config']->get('database.mysql.username'));
-        $this->assertEquals('88.88.88.88', $app['config']->get('database.mysql.host'));
+        $this->assertEquals('root', $app['config']->get('database.db.username'));
+        $this->assertEquals('localhost', $app['config']->get('database.db.host'));
     }
 }

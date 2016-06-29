@@ -9,7 +9,7 @@ use Silex\Api\BootableProviderInterface;
 use Symfony\Component\Finder\Finder;
 use Illuminate\Config\Repository;
 
-class Config implements ServiceProviderInterface, BootableProviderInterface
+class ConfigServiceProvider implements ServiceProviderInterface, BootableProviderInterface
 {
     public function register(Container $app)
     {
