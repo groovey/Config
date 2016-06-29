@@ -6,7 +6,7 @@ A Silex 2 service provider that uses the Laravel config component.
 
     $ composer require groovey/config
 
-# Usage
+## Usage
 
 ```php
 
@@ -25,7 +25,7 @@ $app['config']->set('app.name', 'Groovey')
 $app['config']->get('app.name');
 ```
 
-# Using traits
+## Using traits
 
 ```php
 use Silex\Application;
@@ -39,5 +39,19 @@ $app = new App();
 $app->config('app.name');
 ```
 
+## Sample Config File
+
+```php
+<?php
+
+// config/localhost/app.php
+
+return [
+    'name'  => 'Groovey',
+    'debug' => true,
+    'profile' => true,
+    'translation' => true,
+];
+```
 
 
