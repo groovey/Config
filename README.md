@@ -1,5 +1,5 @@
 ## Config
-A Silex 2 service provider that uses the Laravel config component.
+A Silex 2 service provider that uses the Laravel's config component.
 
 
 ## Installation
@@ -25,7 +25,7 @@ $app['config']->set('app.name', 'Groovey')
 $app['config']->get('app.name');
 ```
 
-## Using traits
+## Traits
 
 ```php
 use Silex\Application;
@@ -47,7 +47,7 @@ $app->config('app.name');
 // config/localhost/app.php
 
 return [
-    'name'  => 'Groovey',
+    'name' => 'Groovey',
     'debug' => true,
     'profile' => true,
     'translation' => true,
