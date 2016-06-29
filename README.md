@@ -9,7 +9,6 @@ A Silex 2 service provider that uses the Laravel's config component.
 ## Usage
 
 ```php
-
 use Groovey\Config\Providers\Config as ConfigServiceProvider;
 
 $app = new Application();
