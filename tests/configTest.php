@@ -1,7 +1,7 @@
 <?php
 
 use Silex\Application;
-use Groovey\Config\Providers\Config as ConfigServiceProvider;
+use Groovey\Config\Providers\ConfigServiceProvider;
 
 class ConfigTest extends PHPUnit_Framework_TestCase
 {
