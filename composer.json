@@ -1,6 +1,6 @@
 {
     "name": "groovey/config",
-    "description": "A Silex 2 service provider that uses Laravel's config component.",
+    "description": "A Silex 2 service provider that uses the Laravel's config component.",
     "license": "MIT",
     "keywords": ["silex", "config", "silex 2", "laravel", "laravel config"],
     "authors": [
