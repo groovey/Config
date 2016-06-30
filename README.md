@@ -1,4 +1,5 @@
-## Config
+# Config
+
 A Silex 2 service provider that uses the Laravel's config component.
 
 
@@ -6,7 +7,7 @@ A Silex 2 service provider that uses the Laravel's config component.
 
     $ composer require groovey/config
 
-## Usage
+## Setup
 
 ```php
 use Groovey\Config\Providers\Config as ConfigServiceProvider;
