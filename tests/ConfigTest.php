@@ -3,7 +3,7 @@
 use Silex\Application;
 use Groovey\Config\Providers\ConfigServiceProvider;
 
-class configTest extends PHPUnit_Framework_TestCase
+class ConfigTest extends PHPUnit_Framework_TestCase
 {
     private function init()
     {
