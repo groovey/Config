@@ -7,7 +7,7 @@ Groovey Config Package
 
     $ composer require groovey/config
 
-## Setup
+## Usage
 
 ```php
 use Groovey\Config\Providers\ConfigServiceProvider;
