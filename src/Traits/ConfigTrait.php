@@ -2,7 +2,7 @@
 
 namespace Groovey\Config\Traits;
 
-trait Config
+trait ConfigTrait
 {
     public function config($setting, $default = '')
     {
