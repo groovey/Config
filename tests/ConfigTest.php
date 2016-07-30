@@ -5,7 +5,9 @@ use Groovey\Config\Providers\ConfigServiceProvider;
 
 class ConfigTest extends PHPUnit_Framework_TestCase
 {
-    private function init()
+    public $app;
+
+    public function setUp()
     {
         $app = new Application();
         $app['debug'] = true;
@@ -15,12 +17,12 @@ class ConfigTest extends PHPUnit_Framework_TestCase
                 'config.environment' => 'LOCALHOST',
             ]);
 
-        return $app;
+        return $this->app = $app;
     }
 
     public function testApp()
     {
-        $app = $this->init();
+        $app = $this->app;
 
         $this->assertEquals('Groovey', $app['config']->get('app.name'));
         $this->assertTrue($app['config']->get('app.debug'));
@@ -32,7 +34,7 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 
     public function testDatabase()
     {
-        $app = $this->init();
+        $app = $this->app;
 
         $this->assertEquals('root', $app['config']->get('database.db.username'));
         $this->assertEquals('localhost', $app['config']->get('database.db.host'));
