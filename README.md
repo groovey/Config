@@ -2,7 +2,6 @@
 
 Groovey Config Package
 
-
 ## Installation
 
     $ composer require groovey/config
@@ -10,16 +9,17 @@ Groovey Config Package
 ## Usage
 
 ```php
+require_once __DIR__.'/vendor/autoload.php';
+
 use Groovey\Config\Providers\ConfigServiceProvider;
 
 $app = new Application();
 $app['debug'] = true;
 
 $app->register(new ConfigServiceProvider(), [
-            'config.path'        => __DIR__.'/config',
-            'config.environment' => 'LOCALHOST',
-        ]);
-
+        'config.path'        => __DIR__.'/config',
+        'config.environment' => 'LOCALHOST',
+    ]);
 
 $app['config']->set('app.name', 'Groovey')
 $app['config']->get('app.name');
@@ -53,5 +53,3 @@ return [
     'translation' => true,
 ];
 ```
-
-
