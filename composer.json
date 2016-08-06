@@ -2,7 +2,7 @@
     "name": "groovey/config",
     "description": "Groovey Config Package.",
     "license": "MIT",
-    "keywords": ["silex"],
+    "keywords": ["silex", "groovey"],
     "authors": [
         {
             "name": "Harold Kim Cantil",
