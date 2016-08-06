@@ -2,7 +2,7 @@
     "name": "groovey/config",
     "description": "Groovey Config Package.",
     "license": "MIT",
-    "keywords": ["silex", "config", "silex 2", "laravel", "laravel config"],
+    "keywords": ["silex"],
     "authors": [
         {
             "name": "Harold Kim Cantil",
