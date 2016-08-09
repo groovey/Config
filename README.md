@@ -18,7 +18,7 @@ $app['debug'] = true;
 
 $app->register(new ConfigServiceProvider(), [
         'config.path'        => __DIR__.'/config',
-        'config.environment' => 'LOCALHOST',
+        'config.environment' => 'localhost',
     ]);
 
 $app['config']->set('app.name', 'Groovey')

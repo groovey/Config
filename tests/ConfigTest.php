@@ -14,7 +14,7 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 
         $app->register(new ConfigServiceProvider(), [
                 'config.path'        => __DIR__.'/config',
-                'config.environment' => 'LOCALHOST',
+                'config.environment' => 'localhost',
             ]);
 
         return $this->app = $app;
