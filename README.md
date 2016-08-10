@@ -44,7 +44,7 @@ $app->config('app.name');
 ```php
 <?php
 
-// config/localhost/app.php
+// ./config/localhost/app.php
 
 return [
     'name' => 'Groovey',
